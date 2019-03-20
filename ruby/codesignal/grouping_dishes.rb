@@ -1,10 +1,8 @@
 def groupingDishes(dishes)
   # group by ingredient
-  dish_names = []
   grouped_hash = {}
   dishes.each.with_index do |dish, index|
     dish_name = dishes[index].shift
-    dish_names << dish_name
     dishes[index].each do |ingredient|
       grouped_hash[ingredient] = [] unless grouped_hash[ingredient]
       grouped_hash[ingredient] << dish_name
